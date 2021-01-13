@@ -22,9 +22,10 @@ Project นี้เป็นส่วนหนึ่งของวิชา Wi
 ### Back-End
    app.js หรือ Back-end File สำหรับ Coding program  
    โดยภายใต้ File นี้จะมีการเรียกใช้ File ต่างๆ และ คืนค่ากลับไปยังตัวแปรต่างๆ  
-   อาทิ การเรียกใช้ไฟล์ Cars.json เพื่อดึงข้อมูลสำหรับตั้งค่าตัวแปรต่างๆให้กับ CarsTemplate สำหรับแสดงผลใน Front-end  
-   การ Request account access และเชื่อมต่อไปยัง Ganache / Metamask  
-   การคืนค่ากลับไปยัง Smart Contract เมื่อมี Transaction เกิดขึ้นเป็นต้น  
+   อาทิ การเรียกใช้ไฟล์ด้วยคำสั่ง get.json เรียกใช้ Cars.json โดยมีคำสั่ง For Loop  
+   เพื่อดึงข้อมูลสำหรับตั้งค่าตัวแปรต่างๆให้กับ CarsTemplate สำหรับแสดงผลใน Front-end  
+   initWeb3 เป็นการระบุว่าจะใช้ web3 (Blocchain) ใดในการเชื่อมต่อกับ Smart Contract  (Metamask ,Legacy browser และ Ganache)
+   markReserved เป็น Function เชื่อมต่อไปยัง Wallet address และเมื่อมี Transaction เกิดขึ้นการแสดงผลของปุ่น Reserve จะเปลี่ยนเป็น Reserved เป็นต้น
 
 ## กำหนดค่าสิ่งแวดล้อม
 สร้าง Directory สำหรับบันทึก Projectนี้ และ ใช้คำสั่งต่อไปนี้เพื่อสร้างและย้ายเข้าไปยัง Directory ชื่อ Ass3
