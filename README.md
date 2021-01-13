@@ -101,14 +101,23 @@ truffle migrate
 ![Metamask](https://user-images.githubusercontent.com/74085959/104418187-1b40d600-55a9-11eb-8872-a04ef6cb97cd.png)
 
    1 Install MetaMask to Firefox
+   
    2 Click Get Started
+   
    3 Import Wallet 
+   
         3.1 Copy Seed จาก Ganache ทำการ Paste ที่ MaetaMask Wallet Seed 
+        
         3.2 Set password และ เลือก I have read and agree to the Terms of Use จากนั้น Click Import
+        
         3.3 Click ที่แถบ Ethereum Mainnet แล้วเลือก Custom RPC
+        
         3.4 ตั้งค่าต่างๆ 
+        
                Network Name >> Ganache (เป็นค่าใดๆ ก็ได้)
+               
                New RPC URL >> http://127.0.0.1:7545 (URL ของ Ganache)
+               
                Chain id >> 5777 (Ganache Network id)
 
 
