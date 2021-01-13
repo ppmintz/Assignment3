@@ -41,7 +41,7 @@ truffle unbox pet-shop
 โดยจะได้ Directory ต่างๆ  
 contracts >> Directory สำหรับเก็บ Smart Contracts ที่เขียนด้วยภาษา Solidity  
 migrations >> Directory สำหรับเก็บ File JavaScript ซึ่งเป็น Code ที่ใช้ในการจัดการ Smart Contracts ให้ลงไปยัง Block Chain  
-src: >> Directory สำหรับเก็บ File ที่เกี่ยวข้องกับ Web Application เช่น JavaScript, CSS, HTML, images เป็นต้น  
+src >> Directory สำหรับเก็บ File ที่เกี่ยวข้องกับ Web Application เช่น JavaScript, CSS, HTML, images เป็นต้น  
 truffle-config.js >> File ที่ใช้ในการกำหนดค่าของโปรเจ็ค  
 
 ## Develop Web-Based DApp
