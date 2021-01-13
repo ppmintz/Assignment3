@@ -72,8 +72,8 @@ truffle compile
 ```
 โปรดตรวจสอบว่า Compile Smart Contracts ได้สำเร็จก่อนทำในขั้นตอนต่อไป
 
-เปิดโปรแกรม Ganache โดยการใช้เมาส์ดับเบิลคลิกที่ชื่อไฟล์ จากนั้น Click ที่ New Workspace  
-ในกรณีที่ใช้งานครั้งแรก หรือ Click ที่ Workspace ที่ต้องการใช้งาน
+เปิดโปรแกรม Ganache โดยการ Double-Click ที่ชื่อไฟล์ จากนั้น Click ที่ New Workspace ในกรณีที่ใช้งานครั้งแรก  
+หรือ Click ที่ Workspace ที่ต้องการใช้งาน
 
 ![Ganache](https://user-images.githubusercontent.com/74085959/104412400-c0a27c80-559e-11eb-9f71-76b59eb9e934.png)
 
