@@ -3,7 +3,26 @@ Project นี้เป็นส่วนหนึ่งของวิชา Wi
 โดยใช้โครงสร้างของ Pet-Shop Web-Based DApp มาทำการพัฒนาให้เข้ากับการใช้งาน
 
 ## Reservation Web-Based DApp
-เป็นการจำลอง Web-Based DApp สำหรับการจองรถสำหรับการเดินทางใน Route Line ต่างๆ
+เป็นการจำลอง Web-Based DApp สำหรับการจองรถสำหรับการเดินทางใน Route Line ต่างๆ โดยมีโครงสร้างพอสังเขปดังนี้
+### Smart Contract
+    สำหรับโปรเจคนี้จะ Smart Contract ถูกสร้างขึ้นใน Booking.sol (เขียนด้วย Solidity) 
+    ภายใต้ Contract ชื่อ Booking
+    โดยมี Address = 8 Address สำหรับ CarID
+    Fuction Reserve สามารถ Reserve CarID โดย Bookers และเปลี่ยนสถานะกลับไปยัง CarID เมื่อถูก Reserve แล้ว
+
+### Deploy Contract
+    ทำการ Migrate Smart Contract Booking สู่ Block-Chain
+
+### Front-End
+    index.html หรือ Front-End File สำหรับสร้าง User Interface ที่เชื่อมต่อกับผู้ใช้งาน 
+    โดยเรียกใช้ Back-end หรือ src ต่างๆ อาธิ app.js , js/truffle-contract.js เป็น้น
+    สามารถปรับแต่งรูปแบบการแสดงผลต่างๆ เช่น Background , Front , Name of Tab ได้ที่ File นี้
+
+### Back-End
+    app.js หรือ Back-end File สำหรับ Coding program โดยภายใต้ File นี้จะมีการเรียกใช้ File ต่างๆ และ คืนค่ากลับไปยังตัวแปลต่างๆ
+    อาธิ การเรียกใช้ไฟล์ Cars.json เพื่อดึงข้อมูลสำหรับตั้งค่าตัวแปลต่างๆให้กับ CarsTemplate สำหรับแสดงผลใน Front-end
+    การ Request account access และเชื่อมต่อไปยัง Ganached / Metamask 
+    การคืนค่ากลับไปยัง Smart Contract เมื่อมี Trassaction เกิดขึ้นเป็นต้น
 
 ## กำหนดค่าสิ่งแวดล้อม
 สร้าง Directory สำหรับบันทึก Projectนี้ และ ใช้คำสั่งต่อไปนี้เพื่อสร้างและย้ายเข้าไปยัง Directory ชื่อ Ass3
@@ -16,6 +35,14 @@ cd Ass3
 ```
 truffle unbox pet-shop
 ```
+โดยจะได้ Directory ต่างๆ 
+contracts >> Directory สำหรับเก็บ Smart Contracts ที่เขียนด้วยภาษา Solidity
+
+migrations >> Directory สำหรับเก็บ File JavaScript ซึ่งเป็น Code ที่ใช้ในการจัดการ Smart Contracts ให้ลงไปยัง Block Chain
+
+src: >> Directory สำหรับเก็บ File ที่เกี่ยวข้องกับ Web Application เช่น JavaScript, CSS, HTML, images เป็นต้น
+
+truffle-config.js >> File ที่ใช้ในการกำหนดค่าของโปรเจ็ค
 
 ## Develope Web-Based DApp
 ### 1. Create Smart Contract
@@ -45,6 +72,9 @@ truffle compile
 ```
 โปรดตรวจสอบว่า Compile Smart Contracts ได้สำเร็จก่อนทำในขั้นตอนต่อไป
 
+เปิดโปรแกรม Ganache โดยการใช้เมาส์ดับเบิลคลิกที่ชื่อไฟล์ จากนั้น Click ที่ New Workspace ในกรณีที่ใช้งานครั้งแรก หรือ Click ที่ Workspace ที่ต้องการใช้งาน
+![Ganache](https://user-images.githubusercontent.com/74085959/104412400-c0a27c80-559e-11eb-9f71-76b59eb9e934.png)
+![Ganache2](https://user-images.githubusercontent.com/74085959/104414342-ae2a4200-55a2-11eb-89a9-7c6a497a02d4.png)
 ใช้ Visual Studio Code ในการสร้างไฟล์ 2_deploy_contracts.js ในไดเร็กทอรี migrations ดังนี้
 ```
 var Booking = artifacts.require("Booking");
@@ -53,13 +83,22 @@ module.exports = function(deployer) {
   deployer.deploy(Booking);
 };
 ```
-เปิดโปรแกรม Ganache โดยการใช้เมาส์ดับเบิลคลิกที่ชื่อไฟล์ จากนั้น Click ที่ New Workspace ในกรณีที่ใช้งานครั้งแรก หรือ Click ที่ Workspace ที่ต้องการใช้งาน
-![Ganache](https://user-images.githubusercontent.com/74085959/104412400-c0a27c80-559e-11eb-9f71-76b59eb9e934.png)
 
 จากนั้นทำการ Migrate โดยใช้คำสั่ง 
 ```
 truffle migrate
 ```
+### >> Connect Ganached to MataMask
+    - Install MetaMask to Firefox
+    - Click Get Started
+    - Import Wallet 
+        - Copy Seed จาก Ganache ทำการ Paste ที่ MaetaMask Wallet Seed 
+        - Set password และ เลือก I have read and agree to the Terms of Use จากนั้น Click Import
+        - Click ที่แถบ Ethereum Mainnet แล้วเลือก Custom RPC
+        - ตั้งค่าต่างๆ 
+               Network Name >> Ganache (เป็นค่าใดๆ ก็ได้)
+               New RPC URL >> http://127.0.0.1:7545 (URL ของ Ganache)
+               Chain id >> 5777 (Ganache Network id)
 
 
 ### 3. Edit ฺBack-end 
