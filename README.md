@@ -354,3 +354,5 @@ $(function() {
 npm run dev
 ```
 Firefox จะถูกเรียกใช้งานที่ URL http://localhost:3000 และแสดงผลลัพธ์
+![Page 1](https://user-images.githubusercontent.com/74085959/104412760-87b6d780-559f-11eb-8676-a246fcb572ac.png)
+![page 2](https://user-images.githubusercontent.com/74085959/104412795-97ceb700-559f-11eb-9534-4912792544a6.png)
