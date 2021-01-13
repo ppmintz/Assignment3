@@ -1,0 +1,67 @@
+[
+  {
+    "id": 0,
+    "name": "Altis",
+    "picture": "images/Altis.jpeg",
+    "Seats": 2,
+    "Model": "Toyota - Altis",
+    "Route": "BKK - PKT"
+  },
+  {
+    "id": 1,
+    "name": "Camry",
+    "picture": "images/Camry.jpeg",
+    "Seats": 3,
+    "Model": "Toyota - Camry",
+    "Route": "BKK - LPG"
+  },
+  {
+    "id": 2,
+    "name": "CHR",
+    "picture": "images/CHR.jpeg",
+    "Seats": 3,
+    "Model": "Toyota - CHR",
+    "Route": "BKK - MSN"
+  },
+  {
+    "id": 3,
+    "name": "City",
+    "picture": "images/City.jpeg",
+    "Seats": 2,
+    "Model": "Honda - City",
+    "Route": "BKK - PLK"
+  },
+  {
+    "id": 4,
+    "name": "Civic",
+    "picture": "images/Civic.jpeg",
+    "Seats": 3,
+    "Model": "Honda - Civic",
+    "Route": "BKK - CMI"
+  },
+  {
+    "id": 5,
+    "name": "CRV",
+    "picture": "images/CRV.jpeg",
+    "Seats": 3,
+    "Model": "Honda - CRV",
+    "Route": "BKK - ACR"
+  },
+  {
+    "id": 6,
+    "name": "Fortuner",
+    "picture": "images/Fortuner.jpeg",
+    "Seats": 5,
+    "Model": "Toyota - Fortuner",
+    "Route": "BKK - CRI"
+  },
+  {
+    "id": 7,
+    "name": "Pajero",
+    "picture": "images/Pajero.jpeg",
+    "Seats": 5,
+    "Model": "Mitsubishi - Pajero",
+    "Route": "BKK - KBI"
+  }
+  
+]
