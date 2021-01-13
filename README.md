@@ -398,4 +398,17 @@ npm run dev
 ```
 Firefox จะถูกเรียกใช้งานที่ URL http://localhost:3000 และแสดงผลลัพธ์
 ![Page 1](https://user-images.githubusercontent.com/74085959/104412760-87b6d780-559f-11eb-8676-a246fcb572ac.png)
+
 ![page 2](https://user-images.githubusercontent.com/74085959/104412795-97ceb700-559f-11eb-9534-4912792544a6.png)
+
+เมื่อมีการกด Reserve MetaMask จะถูกเรียกขึ้นมา 
+![Res1](https://user-images.githubusercontent.com/74085959/104424108-8393b580-55b1-11eb-90ea-b6c1c2317fde.png)
+
+และเมื่อการจ่าย Gas เสร็จสมบูรณ์ Reserve จะถูกเปลี่ยนเป็น Reserved 
+![Res2](https://user-images.githubusercontent.com/74085959/104424117-85f60f80-55b1-11eb-9150-39074cda7c9b.png)
+
+Transaction แสดงรายละเอียดดังรูป
+![Transaction](https://user-images.githubusercontent.com/74085959/104425106-d621a180-55b2-11eb-89ab-2be86eacb2d8.png)
+
+
+
