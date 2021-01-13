@@ -4,10 +4,13 @@ Project นี้เป็นส่วนหนึ่งของวิชา Wi
 
 ## Reservation Web-Based DApp
 เป็นการจำลอง Web-Based DApp สำหรับการจองรถสำหรับการเดินทางใน Route Line ต่างๆ โดยมีโครงสร้างพอสังเขปดังนี้
+
 ### Smart Contract
-   สำหรับโปรเจคนี้ Smart Contract ถูกสร้างขึ้นภายใต้ชื่อ File Booking.sol (เขียนด้วย Solidity) 
+   สำหรับโปรเจคนี้ Smart Contract ถูกสร้างขึ้นภายใต้ชื่อ File Booking.sol (เขียนด้วย Solidity)   
    ภายใต้ Contract ชื่อ Booking
+   
    โดยมี Address = 8 Address สำหรับ CarID
+   
    Function Reserve สามารถ Reserve CarID โดย Bookers และเปลี่ยนสถานะกลับไปยัง CarID เมื่อถูก Reserve แล้ว
 
 ### Deploy Contract
@@ -15,13 +18,18 @@ Project นี้เป็นส่วนหนึ่งของวิชา Wi
 
 ### Front-End
    index.html หรือ Front-End File สำหรับสร้าง User Interface ที่เชื่อมต่อกับผู้ใช้งาน 
+  
    โดยเรียกใช้ Back-end หรือ src ต่างๆ อาทิ app.js , js/truffle-contract.js เป็นต้น
+   
    สามารถปรับแต่งรูปแบบการแสดงผลต่างๆ เช่น Background , Front , Name of Tab ได้ที่ File นี้
 
 ### Back-End
    app.js หรือ Back-end File สำหรับ Coding program โดยภายใต้ File นี้จะมีการเรียกใช้ File ต่างๆ และ คืนค่ากลับไปยังตัวแปรต่างๆ
+   
    อาทิ การเรียกใช้ไฟล์ Cars.json เพื่อดึงข้อมูลสำหรับตั้งค่าตัวแปรต่างๆให้กับ CarsTemplate สำหรับแสดงผลใน Front-end
+   
    การ Request account access และเชื่อมต่อไปยัง Ganache / Metamask 
+   
    การคืนค่ากลับไปยัง Smart Contract เมื่อมี Transaction เกิดขึ้นเป็นต้น
 
 ## กำหนดค่าสิ่งแวดล้อม
@@ -76,7 +84,7 @@ truffle compile
 เปิดโปรแกรม Ganache โดยการใช้เมาส์ดับเบิลคลิกที่ชื่อไฟล์ จากนั้น Click ที่ New Workspace ในกรณีที่ใช้งานครั้งแรก หรือ Click ที่ Workspace ที่ต้องการใช้งาน
 ![Ganache](https://user-images.githubusercontent.com/74085959/104412400-c0a27c80-559e-11eb-9f71-76b59eb9e934.png)
 ![Ganache2](https://user-images.githubusercontent.com/74085959/104414342-ae2a4200-55a2-11eb-89a9-7c6a497a02d4.png)
-ใช้ Visual Studio Code ในการสร้างไฟล์ 2_deploy_contracts.js ในไดเร็กทอรี migrations ดังนี้
+ใช้ Visual Studio Code ในการสร้างไฟล์ 2_deploy_contracts.js ใน migrations Directory ดังนี้
 ```
 var Booking = artifacts.require("Booking");
 
@@ -108,7 +116,7 @@ truffle migrate
 ทำการแก้ไข Back-end ใน src Directory 
 
 #### 3.1 Replace image
-ให้นำไฟล์ภาพที่ต้องการแสดงผลไปไว้ใน Directory image
+ให้นำไฟล์ภาพที่ต้องการแสดงผลไปไว้ใน image  Directory
 
 #### 3.2 Edit File.json
 ทำการ Rename จาก pets.json ให้เป็น cars.json และ Edit Code ให้เป็นดังต่อไปนี้
