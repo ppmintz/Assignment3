@@ -5,24 +5,24 @@ Project นี้เป็นส่วนหนึ่งของวิชา Wi
 ## Reservation Web-Based DApp
 เป็นการจำลอง Web-Based DApp สำหรับการจองรถสำหรับการเดินทางใน Route Line ต่างๆ โดยมีโครงสร้างพอสังเขปดังนี้
 ### Smart Contract
-    สำหรับโปรเจคนี้จะ Smart Contract ถูกสร้างขึ้นใน Booking.sol (เขียนด้วย Solidity) 
+    สำหรับโปรเจคนี้ Smart Contract ถูกสร้างขึ้นภายใต้ชื่อ File Booking.sol (เขียนด้วย Solidity) 
     ภายใต้ Contract ชื่อ Booking
     โดยมี Address = 8 Address สำหรับ CarID
-    Fuction Reserve สามารถ Reserve CarID โดย Bookers และเปลี่ยนสถานะกลับไปยัง CarID เมื่อถูก Reserve แล้ว
+    Function Reserve สามารถ Reserve CarID โดย Bookers และเปลี่ยนสถานะกลับไปยัง CarID เมื่อถูก Reserve แล้ว
 
 ### Deploy Contract
     ทำการ Migrate Smart Contract Booking สู่ Block-Chain
 
 ### Front-End
     index.html หรือ Front-End File สำหรับสร้าง User Interface ที่เชื่อมต่อกับผู้ใช้งาน 
-    โดยเรียกใช้ Back-end หรือ src ต่างๆ อาธิ app.js , js/truffle-contract.js เป็น้น
+    โดยเรียกใช้ Back-end หรือ src ต่างๆ อาทิ app.js , js/truffle-contract.js เป็นต้น
     สามารถปรับแต่งรูปแบบการแสดงผลต่างๆ เช่น Background , Front , Name of Tab ได้ที่ File นี้
 
 ### Back-End
-    app.js หรือ Back-end File สำหรับ Coding program โดยภายใต้ File นี้จะมีการเรียกใช้ File ต่างๆ และ คืนค่ากลับไปยังตัวแปลต่างๆ
-    อาธิ การเรียกใช้ไฟล์ Cars.json เพื่อดึงข้อมูลสำหรับตั้งค่าตัวแปลต่างๆให้กับ CarsTemplate สำหรับแสดงผลใน Front-end
-    การ Request account access และเชื่อมต่อไปยัง Ganached / Metamask 
-    การคืนค่ากลับไปยัง Smart Contract เมื่อมี Trassaction เกิดขึ้นเป็นต้น
+    app.js หรือ Back-end File สำหรับ Coding program โดยภายใต้ File นี้จะมีการเรียกใช้ File ต่างๆ และ คืนค่ากลับไปยังตัวแปรต่างๆ
+    อาทิ การเรียกใช้ไฟล์ Cars.json เพื่อดึงข้อมูลสำหรับตั้งค่าตัวแปรต่างๆให้กับ CarsTemplate สำหรับแสดงผลใน Front-end
+    การ Request account access และเชื่อมต่อไปยัง Ganache / Metamask 
+    การคืนค่ากลับไปยัง Smart Contract เมื่อมี Transaction เกิดขึ้นเป็นต้น
 
 ## กำหนดค่าสิ่งแวดล้อม
 สร้าง Directory สำหรับบันทึก Projectนี้ และ ใช้คำสั่งต่อไปนี้เพื่อสร้างและย้ายเข้าไปยัง Directory ชื่อ Ass3
@@ -46,7 +46,7 @@ truffle-config.js >> File ที่ใช้ในการกำหนดค่
 
 ## Develope Web-Based DApp
 ### 1. Create Smart Contract
-ใช้ Visual Studio Code เพื่อสร้างไฟล์ชื่อ Booking.sol ในไดเร็กทอรี contracts โดยมีโค้ดดังนี้
+ใช้ Visual Studio Code เพื่อสร้างไฟล์ชื่อ Booking.sol ใน contracts Directory โดยมีโค้ดดังนี้
 ```
 pragma solidity ^0.5.0;
 
@@ -88,7 +88,9 @@ module.exports = function(deployer) {
 ```
 truffle migrate
 ```
-### >> Connect Ganached to MataMask
+### >> Connect Ganached to MetaMask
+![Metamask](https://user-images.githubusercontent.com/74085959/104418187-1b40d600-55a9-11eb-8872-a04ef6cb97cd.png)
+
     - Install MetaMask to Firefox
     - Click Get Started
     - Import Wallet 
@@ -101,8 +103,8 @@ truffle migrate
                Chain id >> 5777 (Ganache Network id)
 
 
-### 3. Edit ฺBack-end 
-ทำการแก้ไข Backend ใน Directory src 
+### 3. Edit Back-end 
+ทำการแก้ไข Back-end ใน src Directory 
 
 #### 3.1 Replace image
 ให้นำไฟล์ภาพที่ต้องการแสดงผลไปไว้ใน Directory image
@@ -305,7 +307,7 @@ $(function() {
 })
 ```
 
-### 3. Edit ฺFront-end 
+### 3. Edit Front-end 
 ทำการแก้ไขในส่วนของ User Interface ให้มี Code ต่างๆดังรูป
 จะเห็นได้ว่ามีการเรียกใช้ Template การแสดงผลจาก Back-end
 ```
@@ -388,7 +390,7 @@ $(function() {
 ```
 
 ### 4. Run
-ทำการ Run Backend  โดยใช้คำสั่ง
+ทำการ Run Back-end  โดยใช้คำสั่ง
 ```
 npm run dev
 ```
