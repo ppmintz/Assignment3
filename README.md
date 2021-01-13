@@ -5,24 +5,24 @@ Project นี้เป็นส่วนหนึ่งของวิชา Wi
 ## Reservation Web-Based DApp
 เป็นการจำลอง Web-Based DApp สำหรับการจองรถสำหรับการเดินทางใน Route Line ต่างๆ โดยมีโครงสร้างพอสังเขปดังนี้
 ### Smart Contract
-    สำหรับโปรเจคนี้ Smart Contract ถูกสร้างขึ้นภายใต้ชื่อ File Booking.sol (เขียนด้วย Solidity) 
-    ภายใต้ Contract ชื่อ Booking
-    โดยมี Address = 8 Address สำหรับ CarID
-    Function Reserve สามารถ Reserve CarID โดย Bookers และเปลี่ยนสถานะกลับไปยัง CarID เมื่อถูก Reserve แล้ว
+   สำหรับโปรเจคนี้ Smart Contract ถูกสร้างขึ้นภายใต้ชื่อ File Booking.sol (เขียนด้วย Solidity) 
+   ภายใต้ Contract ชื่อ Booking
+   โดยมี Address = 8 Address สำหรับ CarID
+   Function Reserve สามารถ Reserve CarID โดย Bookers และเปลี่ยนสถานะกลับไปยัง CarID เมื่อถูก Reserve แล้ว
 
 ### Deploy Contract
-    ทำการ Migrate Smart Contract Booking สู่ Block-Chain
+   ทำการ Migrate Smart Contract Booking สู่ Block-Chain
 
 ### Front-End
-    index.html หรือ Front-End File สำหรับสร้าง User Interface ที่เชื่อมต่อกับผู้ใช้งาน 
-    โดยเรียกใช้ Back-end หรือ src ต่างๆ อาทิ app.js , js/truffle-contract.js เป็นต้น
-    สามารถปรับแต่งรูปแบบการแสดงผลต่างๆ เช่น Background , Front , Name of Tab ได้ที่ File นี้
+   index.html หรือ Front-End File สำหรับสร้าง User Interface ที่เชื่อมต่อกับผู้ใช้งาน 
+   โดยเรียกใช้ Back-end หรือ src ต่างๆ อาทิ app.js , js/truffle-contract.js เป็นต้น
+   สามารถปรับแต่งรูปแบบการแสดงผลต่างๆ เช่น Background , Front , Name of Tab ได้ที่ File นี้
 
 ### Back-End
-    app.js หรือ Back-end File สำหรับ Coding program โดยภายใต้ File นี้จะมีการเรียกใช้ File ต่างๆ และ คืนค่ากลับไปยังตัวแปรต่างๆ
-    อาทิ การเรียกใช้ไฟล์ Cars.json เพื่อดึงข้อมูลสำหรับตั้งค่าตัวแปรต่างๆให้กับ CarsTemplate สำหรับแสดงผลใน Front-end
-    การ Request account access และเชื่อมต่อไปยัง Ganache / Metamask 
-    การคืนค่ากลับไปยัง Smart Contract เมื่อมี Transaction เกิดขึ้นเป็นต้น
+   app.js หรือ Back-end File สำหรับ Coding program โดยภายใต้ File นี้จะมีการเรียกใช้ File ต่างๆ และ คืนค่ากลับไปยังตัวแปรต่างๆ
+   อาทิ การเรียกใช้ไฟล์ Cars.json เพื่อดึงข้อมูลสำหรับตั้งค่าตัวแปรต่างๆให้กับ CarsTemplate สำหรับแสดงผลใน Front-end
+   การ Request account access และเชื่อมต่อไปยัง Ganache / Metamask 
+   การคืนค่ากลับไปยัง Smart Contract เมื่อมี Transaction เกิดขึ้นเป็นต้น
 
 ## กำหนดค่าสิ่งแวดล้อม
 สร้าง Directory สำหรับบันทึก Projectนี้ และ ใช้คำสั่งต่อไปนี้เพื่อสร้างและย้ายเข้าไปยัง Directory ชื่อ Ass3
@@ -36,6 +36,7 @@ cd Ass3
 truffle unbox pet-shop
 ```
 โดยจะได้ Directory ต่างๆ 
+
 contracts >> Directory สำหรับเก็บ Smart Contracts ที่เขียนด้วยภาษา Solidity
 
 migrations >> Directory สำหรับเก็บ File JavaScript ซึ่งเป็น Code ที่ใช้ในการจัดการ Smart Contracts ให้ลงไปยัง Block Chain
@@ -91,13 +92,13 @@ truffle migrate
 ### >> Connect Ganached to MetaMask
 ![Metamask](https://user-images.githubusercontent.com/74085959/104418187-1b40d600-55a9-11eb-8872-a04ef6cb97cd.png)
 
-    - Install MetaMask to Firefox
-    - Click Get Started
-    - Import Wallet 
-        - Copy Seed จาก Ganache ทำการ Paste ที่ MaetaMask Wallet Seed 
-        - Set password และ เลือก I have read and agree to the Terms of Use จากนั้น Click Import
-        - Click ที่แถบ Ethereum Mainnet แล้วเลือก Custom RPC
-        - ตั้งค่าต่างๆ 
+   1 Install MetaMask to Firefox
+   2 Click Get Started
+   3 Import Wallet 
+        3.1 Copy Seed จาก Ganache ทำการ Paste ที่ MaetaMask Wallet Seed 
+        3.2 Set password และ เลือก I have read and agree to the Terms of Use จากนั้น Click Import
+        3.3 Click ที่แถบ Ethereum Mainnet แล้วเลือก Custom RPC
+        3.4 ตั้งค่าต่างๆ 
                Network Name >> Ganache (เป็นค่าใดๆ ก็ได้)
                New RPC URL >> http://127.0.0.1:7545 (URL ของ Ganache)
                Chain id >> 5777 (Ganache Network id)
