@@ -20,7 +20,8 @@ Project นี้เป็นส่วนหนึ่งของวิชา Wi
    สามารถปรับแต่งรูปแบบการแสดงผลต่างๆ เช่น Background , Front , Name of Tab ได้ที่ File นี้  
 
 ### Back-End
-   app.js หรือ Back-end File สำหรับ Coding program โดยภายใต้ File นี้จะมีการเรียกใช้ File ต่างๆ และ คืนค่ากลับไปยังตัวแปรต่างๆ  
+   app.js หรือ Back-end File สำหรับ Coding program  
+   โดยภายใต้ File นี้จะมีการเรียกใช้ File ต่างๆ และ คืนค่ากลับไปยังตัวแปรต่างๆ  
    อาทิ การเรียกใช้ไฟล์ Cars.json เพื่อดึงข้อมูลสำหรับตั้งค่าตัวแปรต่างๆให้กับ CarsTemplate สำหรับแสดงผลใน Front-end  
    การ Request account access และเชื่อมต่อไปยัง Ganache / Metamask  
    การคืนค่ากลับไปยัง Smart Contract เมื่อมี Transaction เกิดขึ้นเป็นต้น  
@@ -42,7 +43,7 @@ migrations >> Directory สำหรับเก็บ File JavaScript ซึ่
 src: >> Directory สำหรับเก็บ File ที่เกี่ยวข้องกับ Web Application เช่น JavaScript, CSS, HTML, images เป็นต้น  
 truffle-config.js >> File ที่ใช้ในการกำหนดค่าของโปรเจ็ค  
 
-## Develope Web-Based DApp
+## Develop Web-Based DApp
 ### 1. Create Smart Contract
 ใช้ Visual Studio Code เพื่อสร้างไฟล์ชื่อ Booking.sol ใน contracts Directory โดยมีโค้ดดังนี้
 ```
